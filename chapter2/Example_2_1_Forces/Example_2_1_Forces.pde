@@ -7,6 +7,7 @@ Mover mover;
 void setup() {
   size(640, 360);
   mover = new Mover();
+  println("Click mouse to apply wind force.");
 }
 
 void draw() {
