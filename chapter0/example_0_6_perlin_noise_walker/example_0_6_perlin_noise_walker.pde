@@ -25,7 +25,7 @@ class Walker {
   }
 
   void step() {
-    // {!2} x- and y-position mapped from noise
+    // x- and y-position mapped from noise
     this.x = map(noise(this.tx), 0, 1, 0, width);
     this.y = map(noise(this.ty), 0, 1, 0, height);
 
