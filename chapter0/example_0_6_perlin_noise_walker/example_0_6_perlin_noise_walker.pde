@@ -29,7 +29,7 @@ class Walker {
     this.x = map(noise(this.tx), 0, 1, 0, width);
     this.y = map(noise(this.ty), 0, 1, 0, height);
 
-    // {!2} Move forward through time.
+    // Move forward through time.
     this.tx += 0.01;
     this.ty += 0.01;
   }
