@@ -5,9 +5,9 @@
 // An object for a draggable attractive body in our world
 
 class Attractor {
-  PVector position,dragOffset;
-  float mass,G;
-  boolean dragging,rollover;
+  PVector position, dragOffset;
+  float mass, G;
+  boolean dragging, rollover;
   
   Attractor() {
     this.position = new PVector(width / 2, height / 2);

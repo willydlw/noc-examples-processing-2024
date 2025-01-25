@@ -4,7 +4,7 @@
 
 class Body {
   float mass;
-  PVector position,velocity,acceleration;
+  PVector position, velocity, acceleration;
   
   Body(float x, float y, float m) {
     this.mass = m;

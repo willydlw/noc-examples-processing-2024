@@ -4,7 +4,7 @@
 
 class Mover {
   float mass;
-  PVector position,velocity,acceleration;
+  PVector position, velocity, acceleration;
   
   Mover() {
     this.mass = 1;

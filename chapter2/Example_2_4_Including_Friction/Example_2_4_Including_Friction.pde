@@ -14,7 +14,7 @@ void draw() {
   background(255);
 
   PVector gravity = new PVector(0, 1);
-  //{!1} I should scale by mass to be more accurate, but this example only has one circle
+  //I should scale by mass to be more accurate, but this example only has one circle
   mover.applyForce(gravity);
 
   if (mousePressed) {
@@ -23,13 +23,12 @@ void draw() {
   }
 
   if (mover.contactEdge()) {
-    //{!5 .bold}
     float c = 0.1;
     PVector friction = mover.velocity.copy();
     friction.mult(-1);
     friction.setMag(c);
 
-    //{!1 .bold} Apply the friction force vector to the object.
+    //Apply the friction force vector to the object.
     mover.applyForce(friction);
   }
 

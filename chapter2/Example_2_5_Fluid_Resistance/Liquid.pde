@@ -3,7 +3,9 @@
 // http://natureofcode.com
 
 class Liquid {
-  float x,y,w,h,c;
+  float x, y;
+  float w, h;
+  float c;
   
   Liquid(float x, float y, float w, float h, float c) {
     this.x = x;

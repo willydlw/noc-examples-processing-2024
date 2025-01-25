@@ -6,8 +6,8 @@
 // https://editor.p5js.org/codingtrain/sketches/MkLraatd
 
 class Body {
-  PVector position,velocity,acceleration;
-  float mass,r;
+  PVector position, velocity, acceleration;
+  float mass, r;
   
   Body(float x, float y) {
     this.position = new PVector(x, y);
