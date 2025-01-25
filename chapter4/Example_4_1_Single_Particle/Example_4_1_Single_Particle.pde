@@ -5,7 +5,7 @@
 Particle particle;
 
 void setup() {
-  size(640,360);
+  size(640, 360);
   particle = new Particle(width / 2, 10);
 }
 
