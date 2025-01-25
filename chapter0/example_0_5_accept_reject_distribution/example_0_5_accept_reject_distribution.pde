@@ -3,7 +3,7 @@
 // http://natureofcode.com
 
 // An array to keep track of how often random numbers are picked
-int []randomCounts;
+int[] randomCounts;
 int total = 20;
 
 void setup() {
