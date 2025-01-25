@@ -3,7 +3,7 @@
 // http://natureofcode.com
 
 class Mover {
-  PVector position,velocity,acceleration;
+  PVector position, velocity, acceleration;
   float topSpeed;
   
   Mover() {

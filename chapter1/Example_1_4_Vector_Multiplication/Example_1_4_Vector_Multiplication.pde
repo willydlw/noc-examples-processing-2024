@@ -20,7 +20,7 @@ void draw() {
   stroke(200);
   line(0, 0, mouse.x, mouse.y);
 
-  //{!1} Multiplying a vector!  The vector is now half its original size (multiplied by 0.5).
+  //Multiplying a vector!  The vector is now half its original size (multiplied by 0.5).
   mouse.mult(0.5);
 
   stroke(0);

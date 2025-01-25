@@ -3,7 +3,7 @@
 // http://natureofcode.com
 
 class Mover {
-  PVector position,velocity;
+  PVector position, velocity;
   
   Mover() {
     this.position = new PVector(random(width), random(height));

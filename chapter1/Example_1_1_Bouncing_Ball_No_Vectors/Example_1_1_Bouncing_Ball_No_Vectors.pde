@@ -21,7 +21,7 @@ void draw() {
   x = x + xspeed;
   y = y + yspeed;
 
-  //{!6} Check for bouncing.
+  //Check for bouncing.
   if (x > width || x < 0) {
     xspeed = xspeed * -1;
   }
@@ -32,6 +32,6 @@ void draw() {
   stroke(0);
   fill(127);
   strokeWeight(2);
-  //{!1} Draw the ball at the position (x,y).
+  //Draw the ball at the position (x,y).
   circle(x, y, 48);
 }
