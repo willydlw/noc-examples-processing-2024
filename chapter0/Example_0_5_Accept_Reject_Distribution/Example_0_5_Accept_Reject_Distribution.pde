@@ -7,7 +7,7 @@ int[] randomCounts;
 int total = 20;
 
 void setup() {
-  size(640, 240);
+  size(640, 360);
   randomCounts = new int[total];
   for (int i = 0; i < total; i++) {
     randomCounts[i] = 0;

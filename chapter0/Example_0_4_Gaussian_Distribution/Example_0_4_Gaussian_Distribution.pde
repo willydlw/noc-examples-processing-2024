@@ -3,7 +3,7 @@
 // http://natureofcode.com
 
 void setup() {
-  size(640, 240);
+  size(640, 360);
   background(255);
 }
 
