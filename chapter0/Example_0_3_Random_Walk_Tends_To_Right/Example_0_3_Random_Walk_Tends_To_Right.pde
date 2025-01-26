@@ -5,7 +5,7 @@
 Walker walker;
 
 void setup() {
-  size(640, 240);
+  size(640, 360);
   // Creating the Walker object!
   walker = new Walker();
   background(255);
