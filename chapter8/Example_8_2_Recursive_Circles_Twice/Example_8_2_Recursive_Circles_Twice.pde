@@ -20,7 +20,7 @@ void drawCircles(float x, int y, float radius) {
   noFill();
   circle(x, y, radius * 2);
   if (radius > 4) {
-    //{!2} drawCircles() calls itself twice. For every circle, a smaller circle is drawn to the left and the right.
+    // drawCircles() calls itself twice. For every circle, a smaller circle is drawn to the left and the right.
     drawCircles(x + radius / 2, y, radius / 2);
     drawCircles(x - radius / 2, y, radius / 2);
   }
