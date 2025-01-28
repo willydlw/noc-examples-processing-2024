@@ -2,57 +2,46 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Koch Curve
-// Renders a simple fractal, the Koch snowflake
-// Each recursive level drawn in sequence
+// Recursive Tree
+// Renders a simple tree-like structure via recursion
+// Branching angle calculated as a function of horizontal mouse position
 
-import java.util.List;
-
-// An array for all the line segments
-List<KochLine> segments = new ArrayList();
+float angle;
 
 void setup() {
   size(640, 360);
-  // Left side of canvas
-  PVector start = new PVector(0, 300);
-  // Right side of canvas
-  PVector end = new PVector(width, 300);
-
-  //{!1} The first KochLine object
-  segments.add(new KochLine(start, end));
-
-  //{!3} Apply the Koch rules five times.
-  for (int i = 0; i < 5; i++) {
-    generate();
-  }
 }
 
 void draw() {
   background(255);
-  for (KochLine segment : segments) {
-    segment.show();
-  }
-  noLoop();
+  // Mapping the angle between 0 to 90° (HALF_PI) according to mouseX
+  angle = map(mouseX, 0, width, 0, HALF_PI);
+
+  // Start the tree from the bottom of the canvas
+  translate(width / 2, height);
+  stroke(0);
+  strokeWeight(2);
+  branch(100);
 }
 
-void generate() {
-  // Create the next array
-  List<KochLine> next = new ArrayList();
-  // For every segment
-  for (KochLine segment : segments) {
-    // Calculate 5 koch PVectors (done for us by the line object)
-    PVector[] kochPoints = segment.kochPoints();
-    PVector a = kochPoints[0];
-    PVector b = kochPoints[1];
-    PVector c = kochPoints[2];
-    PVector d = kochPoints[3];
-    PVector e = kochPoints[4];
-    // Make line segments between all the vectors and add them
-    next.add(new KochLine(a, b));
-    next.add(new KochLine(b, c));
-    next.add(new KochLine(c, d));
-    next.add(new KochLine(d, e));
+//{!1} Each branch now receives its length as an argument.
+void branch(float len) {
+  line(0, 0, 0, -len);
+  translate(0, -len);
+
+  //{!1} Each branch's length shrinks by two-thirds.
+  len *= 0.67;
+
+  if (len > 2) {
+    push();
+    rotate(angle);
+    //{!1} Subsequent calls to branch() include the length argument.
+    branch(len);
+    pop();
+
+    push();
+    rotate(-angle);
+    branch(len);
+    pop();
   }
-  // The next segments!
-  segments = next;
 }
